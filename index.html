@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>马来西亚装修合同终止与重新装修全面指南</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+        }
+        body {
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            padding-top: 70px;
+        }
+        .top-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        .nav-link {
+            color: #333;
+            margin: 0 8px;
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #3498db;
+            font-weight: 500;
+        }
+        .navbar-toggler {
+            border: none;
+            box-shadow: none;
+        }
+        .home-page {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .home-page h1 {
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+        .nav-menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .nav-btn {
+            padding: 15px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+        .nav-btn:hover {
+            background: #2980b9;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .exit-btn {
+            padding: 12px 20px;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 8px 5px;
+            display: inline-block;
+        }
+        .exit-btn.primary {
+            background: #3498db;
+        }
+        .exit-btn.primary:hover {
+            background: #2980b9;
+            box-shadow: 0 3px 8px rgba(52, 152, 219, 0.3);
+        }
+        .exit-btn.danger {
+            background: #e74c3c;
+        }
+        .exit-btn.danger:hover {
+            background: #c0392b;
+            box-shadow: 0 3px 8px rgba(231, 76, 60, 0.3);
+        }
+        .chapter-page {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: none;
+        }
+        .chapter-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .chapter-title {
+            color: #2c3e50;
+            font-size: 1.5rem;
+        }
+        .back-btn {
+            padding: 8px 18px;
+            background: #95a5a6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .back-btn:hover {
+            background: #7f8c8d;
+        }
+        .chapter-content {
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+        .chapter-content h3 {
+            color: #3498db;
+            margin: 20px 0 12px;
+            font-size: 1.2rem;
+        }
+        .chapter-content p {
+            margin-bottom: 12px;
+        }
+        .chapter-content ul, .chapter-content ol {
+            margin: 12px 0 12px 25px;
+        }
+        .chapter-content li {
+            margin-bottom: 6px;
+        }
+        .table-container {
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+        .chapter-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12px 0;
+            min-width: 600px;
+        }
+        .chapter-content th, .chapter-content td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        .chapter-content th {
+            background: #f8f9fa;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+        .chapter-content tbody tr:nth-child(even) {
+            background: #fafafa;
+        }
+        .template-box {
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 12px;
+            margin: 15px 0;
+            border-radius: 4px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            font-size: 0.9rem;
+        }
+        .chapter-content a {
+            color: #3498db;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+        .chapter-content a:hover {
+            color: #2980b9;
+            text-decoration: none;
+        }
+        /* 新增：底部链接汇总样式 */
+        .links-summary {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 50px;
+        }
+        .links-summary h2 {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        .links-summary .link-category {
+            margin-bottom: 15px;
+        }
+        .links-summary .link-category h3 {
+            color: #3498db;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        .links-summary .link-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .links-summary .link-list li {
+            margin-bottom: 8px;
+        }
+        @media (max-width: 768px) {
+            .home-page, .chapter-page, .links-summary {
+                padding: 20px 15px;
+            }
+            .nav-menu {
+                grid-template-columns: 1fr;
+            }
+            .chapter-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .exit-btn {
+                padding: 10px 18px;
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg top-nav">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" onclick="backToHome()">装修合同指南</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="topNavMenu">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="openChapter('chapter1')">1. 纠纷现状</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="openChapter('chapter2')">2. 法律依据</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="openChapter('chapter3')">3. 经济分析</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="openChapter('chapter4')">4. 法律程序</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="openChapter('chapter5')">5. 寻找公司</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="openChapter('chapter6')">6. 成本预算</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="openChapter('chapter7')">7. 风险防控</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="openChapter('chapter8')">8. 行动建议</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="home-page" id="homePage">
+        <h1>马来西亚装修合同终止与重新装修全面指南</h1>
+        <div class="nav-menu">
+            <button class="nav-btn" onclick="openChapter('chapter1')">1. 引言：装修合同纠纷的现状与挑战</button>
+            <button class="nav-btn" onclick="openChapter('chapter2')">2. 法律依据与维权基础</button>
+            <button class="nav-btn" onclick="openChapter('chapter3')">3. 终止合同的经济分析</button>
+            <button class="nav-btn" onclick="openChapter('chapter4')">4. 终止合同的法律程序</button>
+            <button class="nav-btn" onclick="openChapter('chapter5')">5. 寻找新装修公司的策略</button>
+            <button class="nav-btn" onclick="openChapter('chapter6')">6. 重新装修成本预算指南</button>
+            <button class="nav-btn" onclick="openChapter('chapter7')">7. 风险防控与保险建议</button>
+            <button class="nav-btn" onclick="openChapter('chapter8')">8. 总结与行动建议</button>
+        </div>
+        <button class="exit-btn primary" onclick="showBrowserTip()">
+            浏览器返回指南
+        </button>
+        <button class="exit-btn danger" onclick="exitGuide()">
+            返回上一页
+        </button>
+    </div>
+    <!-- 章节1 -->
+    <div class="chapter-page" id="chapter1">
+        <div class="chapter-header">
+            <h2 class="chapter-title">1. 引言：装修合同纠纷的现状与挑战</h2>
+            <button class="back-btn" onclick="backToHome()">返回首页</button>
+        </div>
+        <div class="chapter-content">
+            <h3>1.1 马来西亚装修行业合同纠纷概况</h3>
+            <p>马来西亚装修行业正面临着日益严重的合同纠纷问题。根据消费者投诉数据显示，装修质量问题已成为消费者投诉的主要领域之一。这些纠纷不仅涉及工程质量不达标、工期延误等常见问题，还包括材料以次充好、合同条款模糊、售后服务缺失等多重问题。</p>
+            <p>在实际案例中，装修质量问题的表现形式多样。如在TTPM-SAB-(P)-74-2018案中，装修公司完成的工程存在多处缺陷，包括地板瓷砖倾斜、安全栅栏生锈、空调鼓风机位置错误、门框边缘处理粗糙、湿厨房墙砖开裂、抹灰和油漆表面有裂缝和粗糙等问题。这些质量问题不仅影响了房屋的使用功能，还可能造成安全隐患。</p>
+            <h3>1.2 合同终止的常见原因分析</h3>
+            <p>根据马来西亚建筑行业的实践经验，装修合同终止的常见原因主要包括以下几个方面：</p>
+            <ul>
+                <li><strong>质量问题</strong>：最主要的原因。当装修工程出现严重质量缺陷，如结构性问题、防水失效、地板不平、墙面开裂等，且经过多次维修仍无法解决时，业主有权要求终止合同。</li>
+                <li><strong>工期延误</strong>：当装修公司无法按照合同约定的时间完成工程，且延误时间过长，严重影响业主的使用计划时，业主可以依据合同中的时间条款要求终止合同。</li>
+                <li><strong>材料问题</strong>：包括使用不符合合同约定的材料、以次充好、材料质量不达标等（需符合<a href="https://www.cidb.gov.my/" target="_blank">CIDB官网</a>规定的MS标准）。</li>
+                <li><strong>合同条款违约</strong>：涵盖了多种情况，如未按设计图纸施工、擅自变更施工方案、未经同意转包等。</li>
+            </ul>
+            <h3>1.3 本指南的目标与适用范围</h3>
+            <p>本指南旨在为面临装修合同纠纷的马来西亚业主提供全面、实用的法律维权和解决方案。本指南适用于所有在马来西亚境内签订装修合同的业主，特别是遇到以下情况的业主：</p>
+            <ul>
+                <li>装修工程质量严重不达标，经多次维修仍无法解决</li>
+                <li>装修公司延误工期超过合同约定时间</li>
+                <li>装修公司使用不符合合同约定或质量标准的材料</li>
+                <li>装修公司拒绝履行合同义务或擅自变更施工方案</li>
+                <li>业主希望通过合法途径终止合同并寻求赔偿（可通过<a href="https://ttpm.kpdn.gov.my/" target="_blank">消费者索偿仲裁庭官网</a>维权）</li>
+            </ul>
+        </div>
+    </div>
+    <!-- 章节2 -->
+    <div class="chapter-page" id="chapter2">
+        <div class="chapter-header">
+            <h2 class="chapter-title">2. 法律依据与维权基础</h2>
+            <button class="back-btn" onclick="backToHome()">返回首页</button>
+        </div>
+        <div class="chapter-content">
+            <h3>2.1 马来西亚合同法相关条款</h3>
+            <h4>2.1.1 根本违约与合同解除权</h4>
+            <p>根据马来西亚《合同法》（Contracts Act 1950）第40条的规定，当一方当事人拒绝履行或无法履行其承诺时，另一方当事人有权终止合同，除非其已通过言语或行为表示默认合同继续。</p>
+            <p>《合同法》第56条进一步规定了时间要素对合同的影响。当合同中明确约定时间为关键要素（time is of the essence）时，如果一方未能在约定时间内履行义务，合同可由另一方选择解除。</p>
+            <p><strong>根本违约（fundamental breach）</strong>的认定是行使解除权的关键，通常包括：未能按照设计图纸施工、使用严重不合格的材料、工程存在结构性安全隐患、拒绝完成主要工程内容等。</p>
+            <h4>2.1.2 违约赔偿的计算与标准</h4>
+            <p>《合同法》第74条规定了违约赔偿的基本原则：当合同被违反时，受损方有权从违约方获得因违约而造成的损失或损害的赔偿。</p>
+            <p>法院对装修质量问题的赔偿标准主要包括：</p>
+            <ul>
+                <li>直接损失：已支付的工程款、修复费用、拆除费用等</li>
+                <li>间接损失：租金损失、临时居住费用、房屋贬值等</li>
+                <li>精神损害赔偿：特殊情况下的严重生活困扰赔偿</li>
+            </ul>
+            <h3>2.2 消费者保护法规</h3>
+            <h4>2.2.1 服务质量标准与默示保证</h4>
+            <p>马来西亚《消费者保护法》（Consumer Protection Act 1999）第53条明确规定，当向消费者提供服务时，应当默示保证服务将以合理的谨慎和技能进行，并且与服务相关的任何材料都应当适合其用途。</p>
+            <h4>2.2.2 消费者权利与救济途径</h4>
+            <p>《消费者保护法》赋予消费者多项权利，包括获得合格商品和服务的权利、获得公平交易的权利、获得赔偿的权利等。</p>
+            <p>救济途径包括：要求修复、要求更换、要求退款、要求赔偿，或向<a href="https://ttpm.kpdn.gov.my/" target="_blank">消费者索偿仲裁庭（e-Tribunal系统）</a>提起申诉，也可通过<a href="https://www.nccc.org.my/" target="_blank">NCCC全国消费者投诉中心官网</a>提交投诉。</p>
+            <h3>2.3 建筑行业特殊法规</h3>
+            <h4>2.3.1 CIDB相关规定</h4>
+            <p>马来西亚建筑工业发展局（CIDB）根据《建筑工业发展局法》（Act 520）制定了一系列建筑行业规范。所有承包商必须在<a href="https://www.cidb.gov.my/" target="_blank">CIDB官网</a>注册，确保使用的材料符合MS标准，否则将面临罚款（10,000-100,000马币）。</p>
+            <h4>2.3.2 装修工程的特殊要求</h4>
+            <p>装修工程需遵守《统一建筑附例1984》《城乡规划法》等法规，材料需符合MS标准（本地材料）或国际标准（进口材料），部分材料需获得CIDB的COA认证（可在<a href="https://www.cidb.gov.my/" target="_blank">CIDB官网</a>查询认证信息）。</p>
+        </div>
+    </div>
+    <!-- 章节3 -->
+    <div class="chapter-page" id="chapter3">
+        <div class="chapter-header">
+            <h2 class="chapter-title">3. 终止合同的经济分析</h2>
+            <button class="back-btn" onclick="backToHome()">返回首页</button>
+        </div>
+        <div class="chapter-content">
+            <h3>3.1 继续合作vs终止合同的成本对比</h3>
+            <h4>3.1.1 继续合作的潜在成本</h4>
+            <ul>
+                <li>持续维修成本：每次500-2,000马币，可能形成恶性循环</li>
+                <li>质量风险成本：房屋贬值5-10%、邻里纠纷、安全隐患</li>
+                <li>时间成本：1-3个月维修期，每月租金800-2,000马币</li>
+                <li>机会成本：资金和时间浪费，无法享受舒适居住环境</li>
+            </ul>
+            <h4>3.1.2 终止合同的损失评估</h4>
+            <ul>
+                <li>已支付工程款损失：根据质量状况部分返还（参考案例：22,375马币）</li>
+                <li>合同违约金：合理范围内，不超过实际损失</li>
+                <li>重新装修额外成本：50平方米SPC地板10,530-17,550马币</li>
+            </ul>
+            <h3>3.2 不同解决方案的成本效益分析</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <<<th>解决方案</</</th>
+                            <<<th>预估成本（马币）</</</th>
+                            <<<th>优点</</</th>
+                            <<<th>缺点</</</th>
+                            <<<th>风险评估</</</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>原公司重做</td>
+                            <td>2,000（尾款）</td>
+                            <td>省时间，保留部分工程</td>
+                            <td>质量无保证，无质保</td>
+                            <td>高</td>
+                        </tr>
+                        <tr>
+                            <td>新公司重做</td>
+                            <td>10,530-17,550</td>
+                            <td>彻底解决，1-2年质保</td>
+                            <td>损失已付款，额外支付8,530-15,550</td>
+                            <td>低</td>
+                        </tr>
+                        <tr>
+                            <td>混合方案</td>
+                            <td>5,000-7,000</td>
+                            <td>节省成本，保留合格部分</td>
+                            <td>协调两家公司，衔接风险</td>
+                            <td>中</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>3.3 长期成本与风险评估</h3>
+            <p>质量问题的长期潜在损失可能达到50,000-100,000马币，包括：</p>
+            <ul>
+                <li>连锁损失：家具损坏、墙体发霉、电路短路、结构修复（20,000-50,000马币）</li>
+                <li>法律诉讼成本：10,000-50,000马币（可通过<a href="https://www.aiac.world/" target="_blank">AIAC马来西亚国际仲裁中心官网</a>申请专业仲裁）</li>
+                <li>房屋贬值：5-10万马币（50万房产）</li>
+                <li>生活质量成本：噪音、健康、心理压力影响</li>
+            </ul>
+        </div>
+    </div>
+    <!-- 章节4 -->
+    <div class="chapter-page" id="chapter4">
+        <div class="chapter-header">
+            <h2 class="chapter-title">4. 终止合同的法律程序</h2>
+            <button class="back-btn" onclick="backToHome()">返回首页</button>
+        </div>
+        <div class="chapter-content">
+            <h3>4.1 证据收集与评估</h3>
+            <h4>4.1.1 质量问题的证据固定</h4>
+            <ul>
+                <li>现场拍照录像：多角度拍摄，含参照物（如2米靠尺），制作视频记录</li>
+                <li>书面记录保存：沟通记录、合同、报价单、材料清单、维修记录</li>
+                <li>专业评估报告：推荐<a href="https://homeinspection.my/" target="_blank">QLASSIC认证的Home Inspection Malaysia</a>（200-300马币）、建筑测量师、专业工程师</li>
+            </ul>
+            <h4>4.1.2 合同违约的认定标准</h4>
+            <p>根本违约的认定情形：</p>
+            <ul>
+                <li>质量严重不达标：不符合约定标准、材料低劣、结构隐患、多次维修无效</li>
+                <li>工期严重延误：超约定时间、超宽限期、催告后仍未完成</li>
+                <li>拒绝履行义务：拒按图纸施工、拒用约定材料、擅自转包、拒绝维修</li>
+                <li>其他：提供虚假资质、违反安全规范、拒绝质量检验</li>
+            </ul>
+            <h3>4.2 正式解约通知的发送</h3>
+            <h4>4.2.1 通知函的内容与格式</h4>
+            <p>通知函必须包含：标题编号、双方信息、解约事实与理由、法律依据、解约要求、其他事项。</p>
+            <div class="template-box">
+Notice of Contract Termination
+ 
+Termination Notice No. [2025] 001
+ 
+To: XX Renovation Engineering Sdn Bhd
+Registered Address: XX Road, XX City
+Legal Representative: XXX
+ 
+From: XXX (Property Owner)
+Address: XX Road, XX District, XX City
+Contact Number: XXX
+ 
+Whereas:
+ 
+1. We entered into the Renovation Project Contract (Contract No.: XXX) with your company on [Date, e.g., 15 January 2025];
+​
+2. Your company has committed serious breaches of contract, including:
+​
+- The floor installation is severely uneven, with a deviation exceeding 5mm/2m (attached with inspection report);
+​
+- The SPC floor brand used does not conform to the contract agreement;
+​
+- The hollowing rate of wall plastering exceeds 30% (attached with photos);
+​
+- The project progress is severely delayed and remains unfinished to date;
+​
+3. We have requested rectification in writing twice, but the issues have not been fundamentally resolved.
+ 
+Pursuant to Section 40 of the Malaysian Contracts Act 1950, Section 53 of the Consumer Protection Act 1999, and the terms of the Contract, we hereby notify you as follows:
+ 
+1.The Renovation Project Contract shall be terminated with effect from the date this notice is received;
+2.Vacate the construction site and restore it to its original state within 7 days;
+3.Return the project payment of RM XXX within 14 days;
+4.Compensate us for losses amounting to RM XXX within 14 days;
+5.Deliver all project-related documents within 7 days.
+ 
+Signatory (Property Owner): XXX
+Date: [Date of Issuance]
+Attachments: Photos of quality issues, inspection report, rectification notices, copy of the Contract
+            </div>
+            <h4>4.2.2 送达方式与证据保全</h4>
+            <ul>
+                <li>挂号信：<a href="https://www.pos.com.my/" target="_blank">马来西亚邮政（Pos Malaysia）</a>发送，保留凭证，注明"合同解除通知函"</li>
+                <li>律师函：费用500-1,000马币，法律效力更强</li>
+                <li>电子邮件+短信：辅助送达，保留发送记录</li>
+            </ul>
+            <h3>4.3 争议解决途径</h3>
+            <h4>4.3.1 协商与调解</h4>
+            <ul>
+                <li>NCCC调解：免费，电话+603 7877 9000，邮箱myaduan@nccc.org.my，官网<a href="https://www.nccc.org.my/" target="_blank">www.nccc.org.my</a></li>
+                <li>行业协会调解：<a href="https://www.pam.org.my/" target="_blank">马来西亚建筑师协会（PAM）官网</a></li>
+                <li>专业调解：<a href="https://www.aiac.world/" target="_blank">马来西亚国际仲裁中心（AIAC）官网</a></li>
+            </ul>
+            <h4>4.3.2 仲裁与诉讼程序</h4>
+            <p>消费者索偿仲裁庭：</p>
+            <ul>
+                <li>管辖金额：≤50,000马币</li>
+                <li>费用：5马币</li>
+                <li>流程：通过<a href="https://ttpm.kpdn.gov.my/" target="_blank">e-Tribunal系统官网</a>在线申请→填写Form 1→上传证据→缴纳费用→听证→60天内裁决</li>
+            </ul>
+            <p>民事诉讼：</p>
+            <ul>
+                <li>管辖法院：≤10万马币→推事庭；>10万→Sessions Court；复杂问题→高等法院（可通过<a href="https://www.kehakiman.gov.my/" target="_blank">马来西亚司法部门官网</a>查询法院信息）</li>
+                <li>费用：法院费（按比例）+律师费（10-20%）+其他费用</li>
+            </ul>
+            <h3>4.4 维权时效与注意事项</h3>
+            <ul>
+                <li>诉讼时效：6年（自违约发生或知道权利受损之日）</li>
+                <li>证据保全：及时固定，保存原始文件，电子证据备份</li>
+                <li>避免不利行为：不擅自拆除、不签不利文件、不接受不合理和解</li>
+                <li>CIDB投诉：涉及注册承包商违规，可通过<a href="https://www.cidb.gov.my/" target="_blank">CIDB官网投诉通道</a>提交申诉</li>
+            </ul>
+        </div>
+    </div>
+    <!-- 章节5 -->
+    <div class="chapter-page" id="chapter5">
+        <div class="chapter-header">
+            <h2 class="chapter-title">5. 寻找新装修公司的策略</h2>
+            <button class="back-btn" onclick="backToHome()">返回首页</button>
+        </div>
+        <div class="chapter-content">
+            <h3>5.1 资质审核标准</h3>
+            <h4>5.1.1 公司注册与营业资质</h4>
+            <ul>
+                <li>公司注册证书（SSM）：名称一致、地址相符、成立3年以上、状态"Active"（通过<a href="https://www.ssm.com.my/" target="_blank">SSM官网</a>查询，费用10马币）</li>
+                <li>营业执照：有效、营业范围含"装修工程"</li>
+                <li>税务登记：IR No.、SST注册（营业额>50万马币，可通过<a href="https://www.hasil.gov.my/" target="_blank">马来西亚内陆税收局官网</a>验证）</li>
+            </ul>
+            <h4>5.1.2 CIDB认证要求</h4>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <<<th>等级</</</th>
+                            <<<th>注册资本要求</</</th>
+                            <<<th>可承接项目金额</</</th>
+                            <<<th>人员要求</</</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>G1</td>
+                            <td>5,000马币</td>
+                            <td>≤20万马币</td>
+                            <td>至少1名技术证书持有者</td>
+                        </tr>
+                        <tr>
+                            <td>G2</td>
+                            <td>25,000马币</td>
+                            <td>20万-50万马币</td>
+                            <td>至少1名技术证书持有者</td>
+                        </tr>
+                        <tr>
+                            <td>G3</td>
+                            <td>50,000马币</td>
+                            <td>50万-100万马币</td>
+                            <td>至少1名技术证书持有者</td>
+                        </tr>
+                        <tr>
+                            <td>G4</td>
+                            <td>250,000马币</td>
+                            <td>100万-500万马币</td>
+                            <td>至少2名注册工程师</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>住宅装修推荐G2或G3等级，需通过<a href="https://www.cidb.gov.my/" target="_blank">CIDB官网</a>验证证书真实性。</p>
+            <h4>5.1.3 行业认证与信誉评估</h4>
+            <ul>
+                <li>认证：QLASSIC（质量评估，可在<a href="https://www.cidb.gov.my/" target="_blank">CIDB官网</a>查询认证企业）、SCORE（可持续发展，G2-G4需2星以上）</li>
+                <li>协会会员：<a href="https://www.pam.org.my/" target="_blank">PAM（马来西亚建筑师协会）</a>、<a href="https://rehdainstitute.com/" target="_blank">REHDA（马来西亚房屋发展商协会）</a>、<a href="https://www.mbam.org.my/" target="_blank">MBAM（马来西亚建筑商协会）</a></li>
+                <li>口碑：3个以上近期案例、实地考察、客户评价、无负面记录</li>
+                <li>保险：承包商全险、雇主责任险、专业责任险（可要求保险公司提供保单验证，参考<a href="https://www.bnm.gov.my/" target="_blank">马来西亚国家银行官网</a>认可的保险公司名单）</li>
+            </ul>
+            <h3>5.2 合同条款审查要点</h3>
+            <h4>5.2.1 质量标准与验收条款</h4>
+            <ul>
+                <li>质量标准：引用MS/ISO标准（可在<a href="https://www.sirim.my/" target="_blank">SIRIM（马来西亚标准与工业研究院）官网</a>查询标准详情），SPC地板平整度误差<2mm/2m</li>
+                <li>验收程序：分段验收+最终验收，验收期7-14天，复验权利</li>
+                <li>质保条款：质保期1-2年，明确范围、责任，5-10%质保金</li>
+            </ul>
+            <h4>5.2.2 付款方式与进度控制</h4>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <<<th>付款阶段</</</th>
+                            <<<th>付款比例</</</th>
+                            <<<th>付款条件</</</th>
+                            <<<th>备注</</</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>签订合同</td>
+                            <td>30%</td>
+                            <td>合同签订后</td>
+                            <td>用于材料采购</td>
+                        </tr>
+                        <tr>
+                            <td>水电完成</td>
+                            <td>20%</td>
+                            <td>水电工程验收合格</td>
+                            <td>隐蔽工程验收</td>
+                        </tr>
+                        <tr>
+                            <td>泥木完成</td>
+                            <td>20%</td>
+                            <td>泥木工程验收合格</td>
+                            <td>包括地板、墙面等</td>
+                        </tr>
+                        <tr>
+                            <td>油漆完成</td>
+                            <td>20%</td>
+                            <td>油漆工程验收合格</td>
+                            <td>包括墙面、天花等</td>
+                        </tr>
+                        <tr>
+                            <td>竣工验收</td>
+                            <td>10%</td>
+                            <td>整体验收合格</td>
+                            <td>支付前应无质量问题</td>
+                        </tr>
+                        <tr>
+                            <td>质保金</td>
+                            <td>5-10%</td>
+                            <td>质保期满后</td>
+                            <td>质保期1-2年</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h4>5.2.3 违约责任与争议解决</h4>
+            <ul>
+                <li>违约条款：质量不达标（无偿返工）、工期延误（日罚0.1-0.5%）、材料不符（更换+赔偿）</li>
+                <li>争议解决：优先调解/仲裁（<a href="https://www.aiac.world/" target="_blank">AIAC</a>），约定工程所在地管辖</li>
+            </ul>
+            <h3>5.3 实地考察与参考案例</h3>
+            <ul>
+                <li>实地考察：类似项目、细节处理、材料质量、业主评价、售后服务</li>
+                <li>案例评估：1年内完工、规模相近、风格匹配、质量无问题、业主满意</li>
+                <li>要求资料：合同复印件、验收报告、质量保证书、客户推荐信、照片视频</li>
+            </ul>
+        </div>
+    </div>
+    <!-- 章节6 -->
+    <div class="chapter-page" id="chapter6">
+        <div class="chapter-header">
+            <h2 class="chapter-title">6. 重新装修成本预算指南</h2>
+            <button class="back-btn" onclick="backToHome()">返回首页</button>
+        </div>
+        <div class="chapter-content">
+            <h3>6.1 拆除工程成本分析</h3>
+            <h4>6.1.1 拆除工程的计价标准</h4>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <<<th>拆除项目项目</</</th>
+                            <<<th>单价（马币/平方米）</</</th>
+                            <<<th>备注</</</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>拆除墙体</td>
+                            <td>45-58</td>
+                            <td>含垃圾清理</td>
+                        </tr>
+                        <tr>
+                            <td>拆除地板（瓷砖/石材）</td>
+                            <td>8-13</td>
+                            <td>含基层处理</td>
+                        </tr>
+                        <tr>
+                            <td>拆除SPC地板</td>
+                            <td>3-5</td>
+                            <td>相对容易拆除</td>
+                        </tr>
+                        <tr>
+                            <td>拆除吊顶</td>
+                            <td>20-30</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>垃圾清理</td>
+                            <td>15-38</td>
+                            <td>按面积计算</td>
+                        </tr>
+                        <tr>
+                            <td>垃圾清运</td>
+                            <td>600-900/车</td>
+                            <td>3.5吨货车（合规清运公司可查询相关机构）</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>50平方米SPC地板拆除费用：150-250马币（人工2-3+工具0.5-1+垃圾清理0.5-1）。</p>
+            <h4>6.1.2 垃圾处理与清运费用</h4>
+            <ul>
+                <li>市政处理：50-100马币/车，需预约（可通过所在州属市政局官网查询预约方式）</li>
+                <li>私人公司：600-900马币/车（3.5吨）</li>
+                <li>环保处理：可回收50-100马币/车，不可回收100-200马币/车（参考<a href="https://www.doe.gov.my/en/utama-english/" target="_blank">马来西亚环境部官网</a>环保处理标准）</li>
+            </ul>
+            <h3>6.2 重新装修费用预算</h3>
+            <h4>6.2.1 SPC地板更换成本</h4>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <<<th>品牌等级</</</th>
+                            <<<th>单价（马币/平方米）</</</th>
+                            <<<th>50平方米材料成本</</</th>
+                            <<<th>适用场景</</</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>经济型（JENFloor）</td>
+                            <td>30-50</td>
+                            <td>1,500-2,500</td>
+                            <td>出租房、地下室</td>
+                        </tr>
+                        <tr>
+                            <td>中档型（QueensFloor SVT）</td>
+                            <td>60-120</td>
+                            <td>3,000-6,000</td>
+                            <td>普通住宅</td>
+                        </tr>
+                        <tr>
+                            <td>高档型（进口）</td>
+                            <td>120-200</td>
+                            <td>6,000-10,000</td>
+                            <td>豪宅、商业空间</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>安装成本：地面找平15-25 + 地板安装15-25 + 踢脚线5-10/米 + 收边条5-10/米 + 辅助材料（防潮垫5-10/㎡等）。</p>
+            <h4>6.2.2 其他相关工程费用</h4>
+            <ul>
+                <li>墙面处理：铲除10-15 + 批荡20-30 + 刮腻子15-20 + 刷漆15-25（马币/平方米）</li>
+                <li>水电改造：电路50-80 + 水路60-100（马币/平方米），开关20-30/个，灯具50-100/个（材料需符合<a href="https://www.sirim.my/" target="_blank">SIRIM官网</a>认证标准）</li>
+                <li>其他：吊顶50-100/㎡，门窗500-2,000/樘，橱柜800-2,000/米，卫浴2,000-5,000/套</li>
+            </ul>
+            <h3>6.3 省钱技巧与成本控制</h3>
+            <ul>
+                <li>材料采购：集中采购（5-10%折扣）、选中档品牌、把握促销时机、半包（省15-20%）</li>
+                <li>施工优化：合理安排顺序、控制施工范围、分批施工、DIY简单项目</li>
+            </ul>
+            <h3>6.4 50平方米SPC地板更换总预算汇总</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <<<th>项目</</</th>
+                            <<<th>经济型（马币）</</</th>
+                            <<<th>中档型（马币）</</</th>
+                            <<<th>高档型（马币）</</</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>拆除工程</td>
+                            <td>150-250</td>
+                            <td>150-250</td>
+                            <td>150-250</td>
+                        </tr>
+                        <tr>
+                            <td>地面找平</td>
+                            <td>750-1,250</td>
+                            <td>750-1,250</td>
+                            <td>750-1,250</td>
+                        </tr>
+                        <tr>
+                            <td>SPC地板材料</td>
+                            <td>1,500-2,500</td>
+                            <td>3,000-6,000</td>
+                            <td>6,000-10,000</td>
+                        </tr>
+                        <tr>
+                            <td>安装费用</td>
+                            <td>750-1,250</td>
+                            <td>750-1,250</td>
+                            <td>750-1,250</td>
+                        </tr>
+                        <tr>
+                            <td>踢脚线及配件</td>
+                            <td>300-500</td>
+                            <td>300-500</td>
+                            <td>300-500</td>
+                        </tr>
+                        <tr>
+                            <td>其他费用</td>
+                            <td>200-300</td>
+                            <td>200-300</td>
+                            <td>200-300</td>
+                        </tr>
+                        <tr>
+                            <td>合计</td>
+                            <td>3,650-6,050</td>
+                            <td>4,950-9,550</td>
+                            <td>7,950-13,550</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- 章节7 -->
+    <div class="chapter-page" id="chapter7">
+        <div class="chapter-header">
+            <h2 class="chapter-title">7. 风险防控与保险建议</h2>
+            <button class="back-btn" onclick="backToHome()">返回首页</button>
+        </div>
+        <div class="chapter-content">
+            <h3>7.1 施工过程风险控制</h3>
+            <h4>7.1.1 质量监督要点</h4>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <<<th>施工阶段</</</th>
+                            <<<th>监督要点</</</th>
+                            <<<th>检验标准</</</th>
+                            <<<th>注意事项</</</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>地面处理</td>
+                            <td>基层清理、找平</td>
+                            <td>平整度误差<2mm/2m</td>
+                            <td>确保基层干燥、清洁</td>
+                        </tr>
+                        <tr>
+                            <td>防水施工</td>
+                            <td>防水材料、施工工艺</td>
+                            <td>24小时闭水试验无渗漏</td>
+                            <td>重点关注卫生间、厨房</td>
+                        </tr>
+                        <tr>
+                            <td>地板安装</td>
+                            <td>地板质量、安装工艺</td>
+                            <td>接缝严密、无翘边</td>
+                            <td>预留伸缩缝</td>
+                        </tr>
+                        <tr>
+                            <td>墙面处理</td>
+                            <td>腻子、乳胶漆</td>
+                            <td>平整、无裂缝、色泽均匀</td>
+                            <td>注意阴阳角处理</td>
+                        </tr>
+                        <tr>
+                            <td>水电安装</td>
+                            <td>线路布局、管道安装</td>
+                            <td>绝缘电阻>0.5MΩ、无渗漏</td>
+                            <td>做好隐蔽工程记录（参考<a href="https://www.cidb.gov.my/" target="_blank">CIDB官网</a>隐蔽工程规范）</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>质量控制措施：三检制度（自检、互检、专检）、关键工序验收、隐蔽工程拍照、质量问题台账。</p>
+            <h4>7.1.2 安全管理要求</h4>
+            <ul>
+                <li>个人防护：安全帽、绝缘鞋、安全带、警示标志</li>
+                <li>用电安全：漏电保护器、规范接线、接地保护、配电箱上锁（符合<a href="https://www.sirim.my/" target="_blank">SIRIM官网</a>电气安全标准）</li>
+                <li>消防安全：灭火器、禁止吸烟、易燃材料单独存放</li>
+                <li>施工安全：防护措施、避免交叉作业、结构评估、应急预案</li>
+            </ul>
+            <h3>7.2 装修工程保险方案</h3>
+            <h4>7.2.1 承包商全险（CAR）</h4>
+            <ul>
+                <li>保障范围：物质损失（工程、设备、材料）、第三者责任（人身+财产+法律费用）、附加保障（清理残骸、专业费用）</li>
+                <li>投保建议：保额110-120%合同金额、覆盖施工期、免赔额500-2,000马币</li>
+                <li>保费参考：工程总额的0.5-1%（可通过<a href="https://www.piam.org.my/" target="_blank">马来西亚保险协会官网</a>查询合规保险公司）</li>
+            </ul>
+            <h4>7.2.2 其他相关保险</h4>
+            <ul>
+                <li>雇主责任险：强制保险，覆盖施工人员伤亡</li>
+                <li>职业责任险：覆盖设计师、工程师专业疏忽</li>
+                <li>财产一切险：补充保障业主自有财产</li>
+                <li>工程延误险：赔偿延误造成的租金损失</li>
+            </ul>
+            <h3>7.3 合同条款风险防范</h3>
+            <h4>7.3.1 关键条款设计</h4>
+            <ul>
+                <li>质保条款：主体结构5年、防水5年、其他1-2年，48小时维修响应</li>
+                <li>付款条款：验收合格付款、保留5-10%质保金、延期付款利息1-2%/月</li>
+                <li>风险分担：不可抗力（工期顺延）、材料风险（承包商保管）、施工风险（承包商承担）</li>
+                <li>违约条款：质量不达标（无偿返工）、工期延误（日罚0.1-0.5%）、材料不符（更换+赔偿）</li>
+            </ul>
+            <h4>7.3.2 争议解决机制</h4>
+            <ul>
+                <li>协商：7天内友好协商，书面记录</li>
+                <li>调解：30天内，<a href="https://www.nccc.org.my/" target="_blank">NCCC</a>或行业协会，费用分担</li>
+                <li>仲裁：<a href="https://www.aiac.world/" target="_blank">AIAC</a>，工程所在地，终局裁决</li>
+                <li>诉讼：工程所在地法院，适用马来西亚法律（可通过<a href="https://www.kehakiman.gov.my/" target="_blank">司法部门官网</a>了解诉讼流程）</li>
+            </ul>
+        </div>
+    </div>
+    <!-- 章节8 -->
+    <div class="chapter-page" id="chapter8">
+        <div class="chapter-header">
+            <h2 class="chapter-title">8. 总结与行动建议</h2>
+            <button class="back-btn" onclick="backToHome()">返回首页</button>
+        </div>
+        <div class="chapter-content">
+            <h3>8.1 关键决策要点回顾</h3>
+            <h4>经济分析结论</h4>
+            <ul>
+                <li>终止合同经济合理：损失约2,000马币，避免50,000-100,000马币长期损失</li>
+                <li>重新装修成本效益：50㎡SPC地板3,650-13,550马币，中档方案性价比最高，半包省15-20%</li>
+            </ul>
+            <h4>法律依据明确</h4>
+            <ul>
+                <li>合同解除权：《合同法》第40条（根本违约）、《消费者保护法》第53条（服务质量）</li>
+                <li>维权途径：协商调解（低成本）、<a href="https://ttpm.kpdn.gov.my/" target="_blank">消费者索偿仲裁庭</a>（免费快速）、民事诉讼（金额不限）</li>
+            </ul>
+            <h4>风险控制措施</h4>
+            <ul>
+                <li>新公司选择：<a href="https://www.cidb.gov.my/" target="_blank">CIDB注册</a>（G2/G3）、资质齐全、口碑良好、保险覆盖</li>
+                <li>合同签订：明确质量标准、分段付款、质保条款、违约责任</li>
+            </ul>
+            <h3>8.2 立即行动清单</h3>
+            <h4>第一阶段：证据收集与通知（1-2周）</h4>
+            <ol>
+                <li>收集证据：拍照录像、整理文件、专业检测、形成证据链</li>
+                <li>发送解约通知：起草函件、挂号信+邮件发送、保留送达证据、等待回复（7-14天）</li>
+            </ol>
+            <h4>第二阶段：协商调解（2-4周）</h4>
+            <ol>
+                <li>主动协商：沟通解决方案、<a href="https://www.nccc.org.my/" target="_blank">NCCC</a>/协会调解、要求返还+赔偿、书面记录</li>
+                <li>法律程序：仲裁申请（Form 1+证据+5马币，通过<a href="https://ttpm.kpdn.gov.my/" target="_blank">e-Tribunal系统</a>）、等待听证</li>
+            </ol>
+            <h4>第三阶段：寻找新公司（3-4周）</h4>
+            <ol>
+                <li>筛选公司：3-5家候选、资质审核（<a href="https://www.ssm.com.my/" target="_blank">SSM</a>+<a href="https://www.cidb.gov.my/" target="_blank">CIDB</a>查询）、实地考察、详细报价</li>
+                <li>确定公司：对比报价方案、深入谈判、签订合同（重点条款审查）</li>
+            </ol>
+            <h4>第四阶段：重新装修（4-8周）</h4>
+            <ol>
+                <li>施工准备：装修许可证（可通过所在州属市政局官网申请）、施工方案、保险购买、技术交底</li>
+                <li>施工监督：标准监督、关键工序验收、隐蔽工程记录、按进度付款</li>
+                <li>竣工验收：组织验收、签署报告、保留质保金、开始质保期</li>
+            </ol>
+            <h3>8.3 长期维护建议</h3>
+            <h4>日常维护要点</h4>
+            <ul>
+                <li>SPC地板：避免刮擦、中性清洁剂、防积水、每年打蜡</li>
+                <li>墙面：防撞击、补裂缝、查防水、保持通风</li>
+                <li>水电：定期检查、防渗漏、清管道、及时处理问题</li>
+            </ul>
+            <h4>质保期内注意事项</h4>
+            <ul>
+                <li>及时报修：立即通知、保留记录、48小时响应要求</li>
+                <li>监督维修：过程监督、合格材料、维修后验收</li>
+                <li>质保金管理：1-2年质保期、无问题再支付、争议抵扣维修费用</li>
+            </ul>
+            <h3>8.4 最终总结</h3>
+            <p>装修合同纠纷可通过合法途径有效维权，本指南方案具有法律保障充分、经济可行、操作简单的优势。好的装修是家的基础，值得投入时间和精力选择可靠团队。执行过程中遇困难建议寻求专业帮助，确保每一步都在法律框架内进行。祝您装修顺利！</p>
+        </div>
+    </div>
+
+    <!-- 新增：马来西亚装修相关官方/实用链接汇总 -->
+    <div class="links-summary">
+        <h2>马来西亚装修相关官方/实用链接汇总</h2>
+        <div class="link-category">
+            <h3>1. 维权类</h3>
+            <ul class="link-list">
+                <li>消费者索偿仲裁庭 e-Tribunal系统：<a href="https://ttpm.kpdn.gov.my/" target="_blank">https://ttpm.kpdn.gov.my/</a></li>
+                <li>NCCC全国消费者投诉中心：<a href="https://www.nccc.org.my/" target="_blank">https://www.nccc.org.my/</a></li>
+                <li>AIAC马来西亚国际仲裁中心：<a href="https://www.aiac.world/" target="_blank">https://www.aiac.world/</a></li>
+                <li>马来西亚司法部门（法院信息）：<a href="https://www.kehakiman.gov.my/" target="_blank">https://www.kehakiman.gov.my/</a></li>
+            </ul>
+        </div>
+        <div class="link-category">
+            <h3>2. 资质查询类</h3>
+            <ul class="link-list">
+                <li>SSM公司注册查询：<a href="https://www.ssm.com.my/" target="_blank">https://www.ssm.com.my/</a></li>
+                <li>CIDB承包商注册/认证查询：<a href="https://www.cidb.gov.my/" target="_blank">https://www.cidb.gov.my/</a></li>
+                <li>马来西亚内陆税收局（税务验证）：<a href="https://www.hasil.gov.my/" target="_blank">https://www.hasil.gov.my/</a></li>
+                <li>SIRIM标准查询（材料/电气标准）：<a href="https://www.sirim.my/" target="_blank">https://www.sirim.my/</a></li>
+            </ul>
+        </div>
+        <div class="link-category">
+            <h3>3. 行业协会/机构类</h3>
+            <ul class="link-list">
+                <li>PAM马来西亚建筑师协会：<a href="https://www.pam.org.my/" target="_blank">https://www.pam.org.my/</a></li>
+                <li>REHDA马来西亚房屋发展商协会：<a href="https://rehdainstitute.com/" target="_blank">https://rehdainstitute.com/</a></li>
+                <li>MBAM马来西亚建筑商协会：<a href="https://www.mbam.org.my/" target="_blank">https://www.mbam.org.my/</a></li>
+                <li>马来西亚保险协会（合规保险公司查询）：<a href="https://www.piam.org.my/" target="_blank">https://www.piam.org.my/</a></li>
+            </ul>
+        </div>
+        <div class="link-category">
+            <h3>4. 其他实用链接</h3>
+            <ul class="link-list">
+                <li>马来西亚邮政（挂号信服务）：<a href="https://www.pos.com.my/" target="_blank">https://www.pos.com.my/</a></li>
+                <li>马来西亚环境部（环保处理标准）：<a href="https://www.doe.gov.my/en/utama-english/" target="_blank">https://www.doe.gov.my/en/utama-english/</a></li>
+                <li>马来西亚国家银行（认可保险公司）：<a href="https://www.bnm.gov.my/" target="_blank">https://www.bnm.gov.my/</a></li>
+                <li>QLASSIC认证Home Inspection Malaysia（房屋质检报告）：<a href="https://homeinspection.my/" target="_blank">https://homeinspection.my/</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function openChapter(chapterId) {
+            document.getElementById("homePage").style.display = "none";
+            const allChapters = document.getElementsByClassName("chapter-page");
+            for (let i = 0; i < allChapters.length; i++) {
+                allChapters[i].style.display = "none";
+            }
+            document.getElementById(chapterId).style.display = "block";
+            window.scrollTo(0, 0);
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('onclick').includes(chapterId)) {
+                    link.classList.add('active');
+                }
+            });
+        }
+        function backToHome() {
+            const allChapters = document.getElementsByClassName("chapter-page");
+            for (let i = 0; i < allChapters.length; i++) {
+                allChapters[i].style.display = "none";
+            }
+            document.getElementById("homePage").style.display = "block";
+            window.scrollTo(0, 0);
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+        }
+        function exitGuide() {
+            if (window.history.length > 1) {
+                window.history.back();
+                showBrowserTip();
+            } else {
+                if (confirm("无历史浏览记录，点击「确定」返回指南首页")) {
+                    backToHome();
+                }
+            }
+        }
+        function showBrowserTip() {
+            const tip = document.createElement("div");
+            tip.style.cssText = `
+                position: fixed;
+                bottom: 30px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: rgba(0,0,0,0.8);
+                color: white;
+                padding: 10px 18px;
+                border-radius: 25px;
+                font-size: 0.9rem;
+                z-index: 9999;
+                transition: opacity 0.3s;
+                max-width: 90%;
+                text-align: center;
+            `;
+            tip.innerText = "Chrome/Edge提示：左滑屏幕 或 点击底部返回键，快速返回";
+            document.body.appendChild(tip);
+            setTimeout(() => {
+                tip.style.opacity = "0";
+                setTimeout(() => document.body.removeChild(tip), 300);
+            }, 4000);
+        }
+    </script>
+</body>
+</html>
